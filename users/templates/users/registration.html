@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Регистрация пользователя</h1>
+    <div class="form_">
+        <form method="post" id="form_register" >
+            {% csrf_token %}
+            <table>
+                {{ register_form.as_table }}
+            </table>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

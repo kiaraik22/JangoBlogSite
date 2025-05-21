@@ -1,0 +1,619 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', 'Merriweather', serif;
+  background-color: rgba(255, 235, 214, 0.85);
+}
+
+.container {
+  background-color: rgba(228, 209, 179, 0.85);
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+  /* стили для header */
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    padding-top: 14px;
+    background-color: #ad9175;
+
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: black;
+  }
+
+
+.author_href a{
+  color: #7a5c3a;
+  text-decoration: none;
+  font-size: 1.2em;
+
+}
+
+
+
+/* Стили для кнопки в посте на главной странице */
+
+.post-container {
+  position: relative; /* Делаем контейнер относительным для позиционирования кнопки */
+  padding-bottom: 50px; /* Оставляем место для кнопки */
+}
+
+button[type="submit"] {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #ad9175;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #6d5338;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.update_post_a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* стили для постов на главной странице */
+
+  .update_post_a {
+    text-decoration: none;
+    color: black;
+  
+  }
+
+  h1 {
+    color: #5c3a21;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Стиль для каждого поста */
+
+h1 {
+  color: #5c3a21;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+/* Контейнер поста с боковым расположением */
+.post-container {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+  background-color: #fffdf8;
+  border: 1px solid #e0d6c2;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Стили для изображения */
+.post-image {
+  flex: 0 0 200px;
+  align-self: flex-start;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  border: 5px solid #f0e6d2;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+/* Стили для текстового содержимого */
+.post-content {
+  flex: 1;
+}
+
+.post-author {
+  color: #5c3a21;
+  margin-top: 0;
+  font-size: 1.3em;
+  border-bottom: 1px dashed #d1c7b7;
+  padding-bottom: 8px;
+}
+
+.post-title a {
+  color: #7a5c3a;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.post-title a:hover {
+  color: #5c3a21;
+  text-decoration: underline;
+}
+
+.post-text {
+  color: #555;
+  margin: 10px 0;
+}
+
+.post-date {
+  color: #8c7b6b;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+
+/* Главное изображение */
+.main-image {
+  text-align: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.main-image img {
+  max-width: 100%;
+  height: auto;
+  border: 8px solid #f0e6d2;
+  border-radius: 5px;
+}
+
+
+
+
+
+/* Стили формы для создания поста */
+
+#form_register {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #f9f4e8;
+  border: 1px solid #e0d6c2;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  border-radius: 2px 2px 0 0;
+}
+
+form h2 {
+  color: #5c3a21;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  border-bottom: 1px solid #e0d6c2;
+  padding-bottom: 10px;
+}
+
+form p {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  color: #5a3921;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="file"],
+form select {
+  padding: 12px 15px;
+  border: 1px solid #d1c7b7;
+  border-radius: 4px;
+  background-color: #fffdf9;
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+form textarea {
+  min-height: 200px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #a38b6d;
+  box-shadow: 0 0 0 2px rgba(163, 139, 109, 0.2);
+}
+
+form button[type="submit"] {
+  background-color: #8b6b4a;
+  color: white;
+  border: none;
+  padding: 13px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
+  display: block; /* Делаем блочным элементом */
+  margin: 30px auto 0; /* Центрирование */
+  width: auto; /* Отменяем 100% ширину */
+  min-width: 200px; /* Минимальная ширина */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+form button[type="submit"]:hover {
+  background-color: #6d5338;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Добавьте этот стиль для эффекта "книжной страницы" */
+form button[type="submit"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  pointer-events: none;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* Выравнивание по правому краю */
+  gap: 10px; /* Расстояние между кнопками */
+  margin-top: 20px;
+}
+
+.buttons button {
+  background-color: #8b6b4a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #6d5338;
+}
+
+
+
+
+/* стили для информации о посте
+
+
+/* Декоративные элементы */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #c9b18b, #a38b6d, #c9b18b);
+}
+
+/* Обертка для контента */
+.post-content-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.post-image img:hover {
+  transform: scale(1.03);
+} 
+
+/* Текстовая часть */
+.post-text-content {
+  flex: 1;
+}
+
+/* Заголовки и текст */
+
+.container b {
+  color: #7a5c3a;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.container hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d1c7b7, transparent);
+  margin: 20px 0;
+}
+
+.container > p {
+  color: #4a4238;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+
+/* кнопки в информации о посте */
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* Выравниваем кнопки по правому краю */
+  gap: 15px; /* Расстояние между кнопками */
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #d1c7b7; /* Декоративная разделительная линия */
+}
+
+/* Общие стили для кнопок */
+.buttons button {
+  background-color: #8b6b4a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
+  min-width: 160px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Специальный стиль для кнопки удаления */
+.btn_delete button {
+  background-color: #a34a4a; /* Красноватый оттенок */
+}
+
+/* Эффекты при наведении */
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn_redact button:hover {
+  background-color: #6d5338;
+}
+
+.btn_delete button:hover {
+  background-color: #823a3a;
+}
+
+/* Декоративные элементы для кнопок */
+.buttons button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+
+
+
+/* Контейнер для кнопок */
+/* Контейнер для кнопок */
+.btn_tow {
+  display: flex;
+  justify-content: flex-end; /* Выравниваем кнопки по правому краю */
+  gap: 15px; /* Расстояние между кнопками */
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #d1c7b7; /* Декоративная разделительная линия */
+  align-items: center;
+}
+
+/* Общие стили для кнопок */
+.btn_tow .btn_dell_2 button,
+.btn_tow .btn_dell button {
+  background-color: #8b6b4a; /* Основной цвет фона */
+  color: white; /* Цвет текста */
+  border: none; /* Убираем границы */
+  padding: 10px 20px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  border-radius: 4px; /* Скругление углов */
+  cursor: pointer; /* Изменяем курсор при наведении */
+  transition: all 0.3s ease; /* Плавные переходы */
+  font-family: 'Georgia', serif; /* Шрифт */
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  position: relative; /* Для псевдоэлементов */
+}
+
+/* Специальный стиль для кнопки удаления */
+.btn_tow .btn_dell_2 button {
+  background-color: #a34a4a; /* Красноватый оттенок */
+}
+
+/* Эффекты при наведении */
+.btn_tow .btn_dell_2 button:hover,
+.btn_tow .btn_dell button:hover {
+  transform: translateY(-2px); /* Легкий эффект "подъема" */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Усиленная тень */
+}
+
+/* Разные цвета при наведении */
+.btn_tow .btn_dell_2 button:hover {
+  background-color: #823a3a; /* Темно-красный фон */
+}
+
+.btn_tow .btn_dell button:hover {
+  background-color: #6d5338; /* Темно-коричневый фон */
+}
+
+/* Декоративные элементы для кнопок */
+.btn_tow .btn_dell_2 button::after,
+.btn_tow .btn_dell button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  pointer-events: none; /* Игнорируем события мыши */
+}
+
+/* Стиль для ссылок внутри кнопок */
+.btn_tow .btn_dell_2 a,
+.btn_tow .btn_dell a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Наследуем цвет текста */
+  display: inline-block; /* Делаем ссылку блочным элементом */
+}
+
+
+
+
+/* страницы */
+
+
+/* Общие стили для контейнера пагинации */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  font-family: 'Georgia', serif; /* Шрифт в книжном стиле */
+  font-size: 16px;
+  color: #5A4B3E; /* Цвет текста - теплый коричневый */
+}
+
+/* Стили для ссылок */
+.pagination a {
+  text-decoration: none;
+  color: #8B653F; /* Теплый оранжево-коричневый */
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Добавление эффекта при наведении на ссылки */
+.pagination a:hover {
+  background-color: #F4E9D8; /* Светло-бежевый фон */
+  color: #4C3B2A; /* Темно-коричневый текст */
+}
+
+/* Текущая страница */
+.pagination .current {
+  font-weight: bold;
+  color: #4C3B2A; /* Темно-коричневый */
+  padding: 5px 10px;
+  background-color:rgba(228, 209, 179, 0.85); /* Светло-бежевый фон */
+  border-radius: 4px;
+}
+
+/* Добавление декоративных стрелок */
+.pagination a[href*="Первая"]::before {
+  content: "«";
+  margin-right: 5px;
+}
+
+.pagination a[href*="Последняя"]::after {
+  content: "»";
+  margin-left: 5px;
+}
+
+/* Убираем подчеркивание у ссылок */
+.pagination a {
+  text-decoration: none;
+}
+
+/* Добавление разделителя между элементами */
+.step-links > * + * {
+  margin-left: 10px;
+}
+
+
+
+
+/* Форма входа!!! */
+
+
+/* Блок формы */
+.form_login {
+ 
+  max-width: 400px;
+  padding: 20px;
+  margin:0 auto ;
+  background-color: #FFF6E5; /* Более светлый бежевый фон формы */
+  border: 1px solid #D4B895; /* Коричневая рамка */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Поля ввода */
+form p {
+  margin: 10px 0;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  border: 1px solid #D4B895;
+  border-radius: 4px;
+  background-color: #FFFDF7; /* Очень светлый бежевый фон */
+  color: #4C3B2A;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: #8B653F; /* Подсветка при фокусе */
+  outline: none;
+}

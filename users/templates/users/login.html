@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Пожалуйста, войдите на сайт</h1>
+    <div class="form_login">
+        <form method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
